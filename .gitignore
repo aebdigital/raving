@@ -1,6 +1,4 @@
-# Temporarily exclude very large folders (>70MB)  
-sources/referencie/Bioplynova*
-sources/referencie/Vystavba*
+# All reference folders now included
 
 # Allow smaller folders back (<10MB)
 # Keeping: Nadstavba administrativnej budovy, Novostavba mastale, Novostavba odchovne, Novostavba parkoviska
