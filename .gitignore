@@ -1,8 +1,6 @@
-# Temporarily exclude largest image folders (>40MB)  
+# Temporarily exclude very large folders (>70MB)  
 sources/referencie/Bioplynova*
 sources/referencie/Vystavba*
-sources/referencie/Polnohospodarsky*
-sources/referencie/Pristavba*
 
 # Allow smaller folders back (<10MB)
 # Keeping: Nadstavba administrativnej budovy, Novostavba mastale, Novostavba odchovne, Novostavba parkoviska
