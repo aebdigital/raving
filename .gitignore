@@ -1,9 +1,9 @@
-# Temporarily exclude largest image folders
+# Temporarily exclude largest image folders (>10MB)
 sources/referencie/Bioplynova*
 sources/referencie/Vystavba*
 sources/referencie/Polnohospodarsky*
 sources/referencie/Pristavba*
-sources/referencie/Nadstavba*
+sources/referencie/Nadstavba\ a\ rekonstrukcia\ bytoveho\ domu\ 2*
 sources/referencie/Rekonstrukcia*
 sources/referencie/PVOD*
 sources/referencie/Kupelny*
@@ -12,7 +12,7 @@ sources/referencie/ON*
 sources/referencie/Sklad*
 sources/referencie/Tenisova*
 sources/referencie/Rodinny*
-sources/referencie/Novostavba*
 sources/referencie/Prestavba*
 
-# Keep smaller folders for now
+# Allow smaller folders back (<10MB)
+# Keeping: Nadstavba administrativnej budovy, Novostavba mastale, Novostavba odchovne, Novostavba parkoviska
