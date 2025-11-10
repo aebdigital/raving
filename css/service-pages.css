@@ -1,0 +1,149 @@
+/* Service Pages Specific Styles */
+
+/* Service Page Main Section */
+.service-main-section {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.service-content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Service Text Content */
+.service-text-content {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.service-accent-line {
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.service-main-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: #222222;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.service-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 0 30px 0;
+}
+
+/* Service Details Section */
+.service-details-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.service-details-section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #222222;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+.service-details-section ul {
+    margin: 0 0 25px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.service-details-section li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.service-details-section li:last-child {
+    margin-bottom: 0;
+}
+
+.service-details-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 0 20px 0;
+}
+
+.service-details-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Service Image Content */
+.service-image-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.service-image-content img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-main-title {
+        font-size: 2rem;
+    }
+
+    .service-description {
+        font-size: 1rem;
+    }
+
+    .service-details-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-image-content img {
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .service-main-section {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-main-title {
+        font-size: 1.8rem;
+    }
+
+    .service-details-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .service-image-content img {
+        height: 200px;
+    }
+}

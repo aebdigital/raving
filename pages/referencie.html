@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Referencie - RAVING a.s. | Portfolio realizovaných projektov</title>
+    <meta name="description" content="Pozrite si naše referencie a realizované projekty v oblasti stavebníctva. Kompletná stavebná realizácia, žeriavy a mechanizácia.">
+    <meta name="keywords" content="referencie, portfolio, realizácie, stavebné projekty, RAVING, Piešťany, stavebná spoločnosť">
+   
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="../css/base.css?v=3.0">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css?v=3.0">
+    <link rel="stylesheet" href="../css/components/footer.css?v=3.0">
+    <link rel="stylesheet" href="../css/components/hero.css?v=3.0">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../css/referencie.css?v=3.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP and Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navigation-container"></div>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <img src="../sources/hero1.jpg" alt="RAVING referencie pozadie">
+        </div>
+        <div class="contact-hero-content">
+            <div class="container">
+                <h1 class="contact-hero-title">Referencie</h1>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-container">
+                <!-- Left Sidebar Filter -->
+                <div class="filter-sidebar">
+                    <h3 class="filter-title">Kategórie</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">Všetky</button>
+                        <button class="filter-btn" data-category="priemyselne">Priemyselné a poľnohospodárske stavby</button>
+                        <button class="filter-btn" data-category="administrativne">Administratívne budovy</button>
+                        <button class="filter-btn" data-category="rodinne">Rodinné a bytové domy</button>
+                        <button class="filter-btn" data-category="ostatne">Ostatné stavby</button>
+                    </div>
+                </div>
+                
+                <!-- Gallery Content -->
+                <div class="gallery-content">
+                    <!-- Category Heading -->
+                    <div class="category-heading-container">
+                        <h2 id="category-heading" class="category-heading">Všetky projekty</h2>
+                        <div class="category-count" id="category-count">55 projektov</div>
+                    </div>
+                    
+                    <div class="gallery-grid" id="references-gallery">
+                        <!-- Gallery items will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Fallback Components (always loads) -->
+    <script src="../js/fallback-components.js?v=3.0"></script>
+    <script src="../js/gsap-simple.js?v=3.0"></script>
+
+    <!-- Gallery Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryContainer = document.getElementById('references-gallery');
+            
+            // All projects with valid images - filter out projects with only .crdownload files
+            const projects = [
+                {
+                    title: 'Agrocoop Imeľ, Novostavba maštale K250',
+                    description: 'Novostavba maštale pre 250 ks dobytka',
+                    slug: 'agrocoop-imeli-novstavba-mastale-k250',
+                    folder: 'Agrocoop Imel, Novostavba mastale K250',
+                    firstImage: 'DJI_20250917100042_0150_D-1536x864.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'Apartmánový dom Pínia',
+                    description: 'Zakladanie stavby apartmánového domu',
+                    slug: 'apartmanovy-dom-pinia',
+                    folder: 'Apartmanovy dom Pinia - zakladanie stavby',
+                    firstImage: 'PINIA-zaklady-2000x1200.jpg',
+                    category: 'rodinne'
+                },
+                {
+                    title: 'Apartmánový dom Tília',
+                    description: 'Výstavba apartmánového domu Tília',
+                    slug: 'apartmanovy-dom-tilia',
+                    folder: 'Apartmanovy dom Tilia',
+                    firstImage: 'DJI_20250203131255_0129_D-1536x864.jpg',
+                    category: 'rodinne'
+                },
+                {
+                    title: 'Bioplynová stanica RPD Zuberec',
+                    description: 'Výstavba bioplynovéj stanice',
+                    slug: 'bioplynova-stanica-rpd-zuberec',
+                    folder: 'Bioplynova stanica RPD Zuberec',
+                    firstImage: 'Bioplynova-stanica-RPD-Zuberec1.png',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'Cafe Mon Bijou',
+                    description: 'Rekonštrukcia budovy',
+                    slug: 'cafe-mon-bijou',
+                    folder: 'Cafe Mon Bijou rekonstrukcia budovy',
+                    firstImage: 'IMG_6556.jpg',
+                    category: 'ostatne'
+                },
+                {
+                    title: 'Kúpelný dom Irma',
+                    description: 'Stavebné úpravy kúpelného domu',
+                    slug: 'kupelny-dom-irma',
+                    folder: 'Kupelny dom Irma stavebne upravy',
+                    firstImage: 'IRMA-SLK.png',
+                    category: 'ostatne'
+                },
+                {
+                    title: 'Meroco Leopoldov',
+                    description: 'Priemyselný komplex',
+                    slug: 'meroco-leopoldov',
+                    folder: 'Meroco Leopoldov',
+                    firstImage: 'Meroco1.jpg',
+                    category: 'administrativne'
+                },
+                {
+                    title: 'Modernizácia farmy PD Dolná Krupá',
+                    description: 'Modernizácia farmy dojníc',
+                    slug: 'modernizacia-farmy-pd-dolna-krupa',
+                    folder: 'Modernizacia farmy dojnic PD Dolna Krupa',
+                    firstImage: 'DJI_20250609123731_0081_D-1536x864.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'PORSCHE Slovakia',
+                    description: 'Monolitické základy haly',
+                    slug: 'porsche-slovakia',
+                    folder: 'Monoliticke zaklady haly - PORSCHE Slovakia',
+                    firstImage: 'IMG-20230116-WA0003.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'Bytový dom Bernolákova',
+                    description: 'Nadstavba a rekonštrukcia',
+                    slug: 'bytovy-dom-bernolakova',
+                    folder: 'Nadstavba a rekonstrukcia bytoveho domu',
+                    firstImage: 'Benolakova5-2000x1200.jpeg',
+                    category: 'rodinne'
+                },
+                {
+                    title: 'Bytový dom Bernolákova 2',
+                    description: 'Nadstavba a rekonštrukcia časť 2',
+                    slug: 'bytovy-dom-bernolakova-2',
+                    folder: 'Nadstavba a rekonstrukcia bytoveho domu 2',
+                    firstImage: 'Bernolakova-5_1.png',
+                    category: 'rodinne'
+                },
+                {
+                    title: 'Administratívna budova',
+                    description: 'Nadstavba administratívnej budovy',
+                    slug: 'administrativna-budova',
+                    folder: 'Nadstavba administrativnej budovy',
+                    firstImage: 'Vacuumschmelze-nadstavba.png',
+                    category: 'administrativne'
+                },
+                {
+                    title: 'Administratívna budova Ekom',
+                    description: 'Nadstavba budovy Ekom',
+                    slug: 'administrativna-budova-ekom',
+                    folder: 'Nadstavba administrativnej budovy Ekom',
+                    firstImage: 'Ekom-stavba.jpg',
+                    category: 'administrativne'
+                },
+                {
+                    title: 'Maštal PD Okoč',
+                    description: 'Novostavba maštale 4.250m2',
+                    slug: 'mastal-pd-okoc',
+                    folder: 'Novostavba mastale PD Okoc, 4.250m2',
+                    firstImage: '20211109_131536-1024x768.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'Odchovná mladého dobytka',
+                    description: 'Novostavba odchovne - stavebná časť',
+                    slug: 'odchovna-mladeho-dobytka',
+                    folder: 'Novostavba odchovne mladeho dobytka - stavebna cast',
+                    firstImage: '20200630_095021-1024x768.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'Parkovisko',
+                    description: 'Novostavba a rekonštrukcia parkoviska',
+                    slug: 'parkovisko',
+                    folder: 'Novostavba parkoviska, rekonstrukcia jestvujuceho parkoviska',
+                    firstImage: 'DJI_20250331133341_0059_D-1536x864.jpg',
+                    category: 'ostatne'
+                },
+                {
+                    title: 'Výrobná hala Stakotra',
+                    description: 'Novostavba výrobnej haly',
+                    slug: 'vyrobna-hala-stakotra',
+                    folder: 'Novostavba vyrobnej haly',
+                    firstImage: 'Stakotra-1.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'JFK INOVEC 9.000m2',
+                    description: 'Výrobná hala 9.000m2',
+                    slug: 'jfk-inovec-9000m2',
+                    folder: 'Novostavba vyrobnej haly 9.000m2, JFK INOVEC sro',
+                    firstImage: '20231013_084857-1-1536x728.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'JFK Inovec 3.000m2',
+                    description: 'Výrobná hala 3.000m2, areál Stakotra',
+                    slug: 'jfk-inovec-3000m2',
+                    folder: 'Novostavba vyrobnej haly, JFK Inovec, 3.000m2, areal Stakotra Piestany',
+                    firstImage: 'Stakotra-zemne-prace-1024x768.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'ON Semiconductor',
+                    description: 'Priemyselný komplex Piešťany',
+                    slug: 'on-semiconductor',
+                    folder: 'ON Semiconductor Piestany',
+                    firstImage: 'OnSemiconductor1.jpg',
+                    category: 'administrativne'
+                },
+                {
+                    title: 'Obchodný dom Domoss',
+                    description: 'Obchodný dom Piešťany',
+                    slug: 'obchodny-dom-domoss',
+                    folder: 'Obchodny dom Domoss Piestany',
+                    firstImage: 'domoss-letak.jpg',
+                    category: 'administrativne'
+                },
+                {
+                    title: 'PD Dobrá Niva - Odchovná',
+                    description: 'Odchovná mladého dobytka',
+                    slug: 'pd-dobra-niva-odchovna',
+                    folder: 'Odchovna mladeho dobytka PD Dobra Niva',
+                    firstImage: '20190924_102530.jpg',
+                    category: 'priemyselne'
+                },
+                {
+                    title: 'PD Okoč - Silážný žlab',
+                    description: 'Novostavba silážneho žlabu',
+                    slug: 'pd-okoc-silazny-zlab',
+                    folder: 'PD Okoc - novostavba silazneho zlabu',
+                    firstImage: 'IMG-20231013-WA0004-1-1536x1152.jpg'
+                },
+                {
+                    title: 'PD Radošinka',
+                    description: 'Maštal + robotizovaná kruhová dojáreň',
+                    slug: 'pd-radosinka',
+                    folder: 'PD Radosinka, mastal + robotizovana kruhova dojaren',
+                    firstImage: 'IMG_4159-1365x2048.jpg'
+                },
+                {
+                    title: 'PVOD Kočín',
+                    description: 'Poľnohospodársky vodohospodársky objekt',
+                    slug: 'pvod-kocin',
+                    folder: 'PVOD Kocin',
+                    firstImage: 'PD-Sterusy.jpg'
+                },
+                {
+                    title: 'PD Dobrá Niva',
+                    description: 'Poľnohospodárske družstvo',
+                    slug: 'pd-dobra-niva',
+                    folder: 'Polnohospodarsky druzstvo Dobra Niva',
+                    firstImage: 'Dobra-Niva-Sasa-2000x910.jpg'
+                },
+                {
+                    title: 'PD Ostrov',
+                    description: 'Poľnohospodárske družstvo Ostrov',
+                    slug: 'pd-ostrov',
+                    folder: 'Polnohospodarsky druzstvo Ostrov',
+                    firstImage: 'Kravin-ostrov.png'
+                },
+                {
+                    title: 'Oxymat Vadovce',
+                    description: 'Prestavba haly firmy',
+                    slug: 'oxymat-vadovce',
+                    folder: 'Prestavba haly firmy Oxymat',
+                    firstImage: 'Oxymat-Vadovce.png'
+                },
+                {
+                    title: 'RD Považany',
+                    description: 'Prestavba rodinného domu',
+                    slug: 'rd-povazany',
+                    folder: 'Prestavba rodinneho domu',
+                    firstImage: 'Rodinny-dom-Povazany-2000x1200.png'
+                },
+                {
+                    title: 'Hella Slovakia - Jedáleň',
+                    description: 'Prístavba jedálne',
+                    slug: 'hella-slovakia-jedalen',
+                    folder: 'Pristavba jedalne Hella Slovakia',
+                    firstImage: 'Hella-Slovakia-Front-Lighting.png'
+                },
+                {
+                    title: 'Vacuumschmelze - Sklady',
+                    description: 'Prístavba skladu KB a haly',
+                    slug: 'vacuumschmelze-sklady',
+                    folder: 'Pristavba skladu KB a haly',
+                    firstImage: 'Vacuumschmelze-hala.png'
+                },
+                {
+                    title: 'Gymnázium',
+                    description: 'Prístavba tried a výstavba telocvične',
+                    slug: 'gymnazium',
+                    folder: 'Pristavba tried a vystavba telocvicne Gymnazia',
+                    firstImage: 'Gymnazium-pristavba.jpeg'
+                },
+                {
+                    title: 'Prístrešok na palety',
+                    description: 'Prístrešok a spevnené plochy 2.500m2',
+                    slug: 'pristresok-na-palety',
+                    folder: 'Pristresok na palety a spevnene plochy 2.500m2',
+                    firstImage: '20210809_082108-1024x768.jpg'
+                },
+                {
+                    title: 'PVOD Drahovce',
+                    description: 'Rekonštrukcia a prístavba maštale',
+                    slug: 'pvod-drahovce',
+                    folder: 'Rekonstrukcia a pristavba mastale PVOD Drahovce',
+                    firstImage: 'POHLAD.jpg'
+                },
+                {
+                    title: 'Kotolňa Brezová',
+                    description: 'Rekonštrukcia kotolne na biomasu',
+                    slug: 'kotolna-brezova',
+                    folder: 'Rekonstrukcia kotolne na biomasu',
+                    firstImage: 'Kotolna-Brezova1.jpg'
+                },
+                {
+                    title: 'Balnea Palace',
+                    description: 'Rekonštrukcia kúpelného hotela',
+                    slug: 'balnea-palace',
+                    folder: 'Rekonstrukcia kupelneho hotela',
+                    firstImage: 'Balnea-Palace5.jpeg'
+                },
+                {
+                    title: 'Penzión Anna Vila',
+                    description: 'Rekonštrukcia penziónu, Piešťany',
+                    slug: 'penzion-anna-vila',
+                    folder: 'Rekonstrukcia penzionu Anna Vila, Sad A. Kmeta, Piestany',
+                    firstImage: 'IMG_2364-1-rotated (1).jpg'
+                },
+                {
+                    title: 'Vrbovská cesta',
+                    description: 'Rekonštrukcia polyfunkčnej budovy',
+                    slug: 'vrbovska-cesta',
+                    folder: 'Rekonstrukcia polyfunkcnej budovy, vlastne sidlo spolocnosti',
+                    firstImage: 'Vrbovska-1536x864.jpg'
+                },
+                {
+                    title: 'Kúpele Piešťany - Bazén',
+                    description: 'Rekonštrukcia trakčného bazéna',
+                    slug: 'kupele-piestany-bazen',
+                    folder: 'Rekonstrukcia trakcneho bazena Kupele Piestany',
+                    firstImage: '20200706_150802-1024x768.jpg'
+                },
+                {
+                    title: 'Kúpalisko EVA',
+                    description: 'Rekonštrukcia vonkajších bazénov',
+                    slug: 'kupalisko-eva',
+                    folder: 'Rekonstrukcia vonkajsich bazenov kupaliska EVA',
+                    firstImage: 'kupalisko-EVA-2000x1200.png'
+                },
+                {
+                    title: 'Chata Modra Harmónia',
+                    description: 'Rekreačná chata',
+                    slug: 'chata-modra-harmonia',
+                    folder: 'Rekreacna chata - Modra Harmonia',
+                    firstImage: '1_viz-1.jpg'
+                },
+                {
+                    title: 'RD s bazénom Piešťany',
+                    description: 'Rodinný dom s bazénom',
+                    slug: 'rd-s-bazenom-piestany',
+                    folder: 'Rodinny dom s bazenom Piestany',
+                    firstImage: 'Rodinny-dom-Piestany.jpg'
+                },
+                {
+                    title: 'Sklad hnojaček Senica',
+                    description: 'Sklad kvapalných hnojív DAM',
+                    slug: 'sklad-hnojaciek-senica',
+                    folder: 'Sklad kvapalnych hnojiv DAM Senica',
+                    firstImage: 'Agropodnik-Trnava-2000x1200.png'
+                },
+                {
+                    title: 'Kúpele Piešťany a.s.',
+                    description: 'Slovenské liečebné kúpele',
+                    slug: 'kupele-piestany-as',
+                    folder: 'Slovenske liecebne kupele Piestany, a.s.',
+                    firstImage: 'Riaditelstvo-kupelov-pristavba.jpeg'
+                },
+                {
+                    title: 'Telocvičňa Slávia Trnava',
+                    description: 'Telocvičňa v prírode',
+                    slug: 'telocvicna-slavia-trnava',
+                    folder: 'Telocvicna v prirode - Slavia Trnava',
+                    firstImage: '1_viz.jpg'
+                },
+                {
+                    title: 'Tenisová akadémia Empire',
+                    description: 'Tenisová akadémia Trnava',
+                    slug: 'tenisova-akademia-empire',
+                    folder: 'Tenisova akademia Empire Trnava',
+                    firstImage: 'Tenisova-akademia-Trnava.jpg'
+                },
+                {
+                    title: 'Agropodnik Trnava - ČOV',
+                    description: 'Úprava retencie dažďových vôd a nová ČOV',
+                    slug: 'agropodnik-trnava-cov',
+                    folder: 'Uprava retencie dazdovych vod a nova COV - areal Agropodnik Trnava',
+                    firstImage: 'IMG-20221006-WA0011-1536x1152.jpg'
+                },
+                {
+                    title: 'Rybárova farma Šurany',
+                    description: 'Výkrm býkov',
+                    slug: 'rybarova-farma-surany',
+                    folder: 'Vykrm bykov Rybarova farma Surany',
+                    firstImage: '20200127_104648-2000x1200.jpg'
+                },
+                {
+                    title: 'Vacuumschmelze - Administratíva',
+                    description: 'Výstavba administratívnej budovy',
+                    slug: 'vacuumschmelze-administrativa',
+                    folder: 'Vystavba administrativnej budovy',
+                    firstImage: '20170614_101352-2000x1200.jpg'
+                },
+                {
+                    title: 'PD Ostrov - Osivová kukurica',
+                    description: 'Výstavba prevádzok na produkciu osivovej kukurice',
+                    slug: 'pd-ostrov-osivova-kukurica',
+                    folder: 'Vystavba prevadzok na produkciu osivovej kukurice',
+                    firstImage: 'PD-Ostrov-morzovna.png'
+                },
+                {
+                    title: 'RD Piešťany',
+                    description: 'Výstavba rodinného domu',
+                    slug: 'rd-piestany',
+                    folder: 'Vystavba rodinneho domu Piestany',
+                    firstImage: 'dom-Piestany.png',
+                    category: 'rodinne'
+                }
+            ];
+            
+            // Add categories to remaining projects that don't have them yet
+            projects.forEach(function(project) {
+                if (!project.category) {
+                    // Categorize based on your specification
+                    if (project.title.includes('Rekonštrukcia trakčného bazéna') || 
+                        project.title.includes('Tenisová akadémia Empire') ||
+                        project.title.includes('Prístavba jedálne Hella Slovakia') ||
+                        project.title.includes('Rozšírenie parkoviska HELLA Slovakia') ||
+                        project.title.includes('Rekonštrukcia vonkajších bazénov kúpaliska EVA') ||
+                        project.title.includes('Kúpelný dom Irma') ||
+                        project.title.includes('Balnea Palace') ||
+                        project.title.includes('Cafe Mon Bijou') ||
+                        project.title.includes('Gymnázium') ||
+                        project.slug === 'kupele-piestany-bazen' ||
+                        project.slug === 'tenisova-akademia-empire' ||
+                        project.slug === 'hella-slovakia-jedalen' ||
+                        project.slug === 'kupalisko-eva' ||
+                        project.slug === 'chata-modra-harmonia' ||
+                        project.slug === 'telocvicna-slavia-trnava') {
+                        project.category = 'ostatne';
+                    } else if (project.title.includes('Apartmánový dom') ||
+                               project.title.includes('Bytový dom') ||
+                               project.title.includes('Rodinný dom') ||
+                               project.title.includes('RD ') ||
+                               project.title.includes('Prestavba rodinného domu') ||
+                               project.slug === 'apartmanovy-dom-pinia' ||
+                               project.slug === 'apartmanovy-dom-tilia' ||
+                               project.slug === 'bytovy-dom-bernolakova' ||
+                               project.slug === 'bytovy-dom-bernolakova-2' ||
+                               project.slug === 'rd-s-bazenom-piestany' ||
+                               project.slug === 'rd-piestany' ||
+                               project.slug === 'rd-povazany') {
+                        project.category = 'rodinne';
+                    } else if (project.title.includes('Administratívna budova') ||
+                               project.title.includes('ON Semiconductor') ||
+                               project.title.includes('Meroco') ||
+                               project.title.includes('Penzión') ||
+                               project.title.includes('Vrbovská cesta') ||
+                               project.title.includes('Kúpele Piešťany a.s.') ||
+                               project.slug === 'administrativna-budova' ||
+                               project.slug === 'administrativna-budova-ekom' ||
+                               project.slug === 'on-semiconductor' ||
+                               project.slug === 'meroco-leopoldov' ||
+                               project.slug === 'penzion-anna-vila' ||
+                               project.slug === 'vrbovska-cesta' ||
+                               project.slug === 'kupele-piestany-as' ||
+                               project.slug === 'pd-okoc-silazny-zlab' ||
+                               project.slug === 'vacuumschmelze-administrativa') {
+                        project.category = 'administrativne';
+                    } else {
+                        // Everything else goes to priemyselne a polnohospodarske stavby
+                        project.category = 'priemyselne';
+                    }
+                }
+            });
+            
+            // Function to render gallery items with smooth animations
+            function renderGallery(projectsToShow = projects) {
+                // Get existing items for smooth transition
+                const existingItems = Array.from(galleryContainer.children);
+                
+                // Fade out existing items
+                existingItems.forEach((item, index) => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        if (item.parentNode) {
+                            item.parentNode.removeChild(item);
+                        }
+                    }, 300);
+                });
+                
+                // Clear and add new items after animation
+                setTimeout(() => {
+                    galleryContainer.innerHTML = '';
+                    
+                    projectsToShow.forEach(function(project, index) {
+                        const galleryItem = document.createElement('div');
+                        galleryItem.className = 'gallery-item';
+                        galleryItem.setAttribute('data-category', project.category);
+                        galleryItem.style.opacity = '0';
+                        galleryItem.style.transform = 'translateY(30px)';
+                        
+                        galleryItem.innerHTML = `
+                            <a href="projekt/projekt-${project.slug}.html" style="text-decoration: none; color: inherit;" class="project-link">
+                                <div class="gallery-image-container">
+                                    <img src="../sources/referencie/${project.folder}/${project.firstImage}" alt="${project.title}" loading="lazy">
+                                    <div class="gallery-overlay">
+                                        <div class="gallery-title">${project.title}</div>
+                                        <div class="gallery-description">${project.description}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        `;
+                        
+                        // Add click event to save scroll position
+                        const projectLink = galleryItem.querySelector('.project-link');
+                        projectLink.addEventListener('click', function() {
+                            // Save current scroll position and active filter
+                            localStorage.setItem('galleryScrollPosition', window.pageYOffset);
+                            const activeFilter = document.querySelector('.filter-btn.active');
+                            if (activeFilter) {
+                                localStorage.setItem('activeFilter', activeFilter.getAttribute('data-category'));
+                            }
+                        });
+                        
+                        galleryContainer.appendChild(galleryItem);
+                        
+                        // Animate in with staggered delay
+                        setTimeout(() => {
+                            galleryItem.style.transition = 'all 0.5s ease';
+                            galleryItem.style.opacity = '1';
+                            galleryItem.style.transform = 'translateY(0)';
+                        }, index * 50 + 350); // Stagger the animations
+                    });
+                }, 350);
+            }
+            
+            // Initial render of all projects
+            renderGallery();
+            
+            // Restore scroll position and filter if returning from project page
+            function restoreGalleryState() {
+                const savedScrollPosition = localStorage.getItem('galleryScrollPosition');
+                const savedFilter = localStorage.getItem('activeFilter');
+                
+                if (savedFilter && savedFilter !== 'all') {
+                    // Find and activate the saved filter
+                    const filterToActivate = document.querySelector(`[data-category="${savedFilter}"]`);
+                    if (filterToActivate) {
+                        // Remove active from all buttons
+                        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                        // Activate the saved filter
+                        filterToActivate.classList.add('active');
+                        
+                        // Filter and render projects
+                        const filteredProjects = projects.filter(project => project.category === savedFilter);
+                        updateCategoryHeading(savedFilter, filteredProjects.length);
+                        renderGallery(filteredProjects);
+                    }
+                }
+                
+                if (savedScrollPosition) {
+                    // Restore scroll position after a short delay to ensure content is rendered
+                    setTimeout(() => {
+                        window.scrollTo(0, parseInt(savedScrollPosition));
+                        // Clear the saved position
+                        localStorage.removeItem('galleryScrollPosition');
+                        localStorage.removeItem('activeFilter');
+                    }, 1000);
+                }
+            }
+            
+            // Check if we're returning from a project page (by checking referrer)
+            if (document.referrer && document.referrer.includes('/projekt/')) {
+                restoreGalleryState();
+            }
+            
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Function to update category heading and count
+            function updateCategoryHeading(category, projectCount) {
+                const categoryHeading = document.getElementById('category-heading');
+                const categoryCount = document.getElementById('category-count');
+                
+                const categoryNames = {
+                    'all': 'Všetky projekty',
+                    'priemyselne': 'Priemyselné a poľnohospodárske stavby',
+                    'administrativne': 'Administratívne budovy',
+                    'rodinne': 'Rodinné a bytové domy',
+                    'ostatne': 'Ostatné stavby'
+                };
+                
+                if (categoryHeading) {
+                    categoryHeading.textContent = categoryNames[category] || 'Všetky projekty';
+                }
+                
+                if (categoryCount) {
+                    const countText = projectCount === 1 ? 'projekt' : (projectCount < 5 ? 'projekty' : 'projektov');
+                    categoryCount.textContent = `${projectCount} ${countText}`;
+                }
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Don't do anything if this button is already active
+                    if (this.classList.contains('active')) {
+                        return;
+                    }
+                    
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get the category to filter by
+                    const category = this.getAttribute('data-category');
+                    
+                    // Smooth scroll to top of page first
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Filter and render projects after scroll animation
+                    setTimeout(() => {
+                        let filteredProjects;
+                        if (category === 'all') {
+                            filteredProjects = projects;
+                        } else {
+                            filteredProjects = projects.filter(project => project.category === category);
+                        }
+                        
+                        // Update heading and count
+                        updateCategoryHeading(category, filteredProjects.length);
+                        
+                        // Render gallery
+                        renderGallery(filteredProjects);
+                    }, 500); // Increased delay to ensure scroll completes
+                });
+            });
+        });
+    </script>
+
+    <!-- Main JavaScript (ES6 modules) -->
+    <script type="module" src="../js/main.js?v=3.0"></script>
+</body>
+</html>

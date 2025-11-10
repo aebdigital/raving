@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Polnohospodarsky druzstvo Dobra Niva - RAVING a.s.</title>
+    <meta name="description" content="Polnohospodarsky druzstvo Dobra Niva - stavebné práce RAVING a.s.">
+    <meta name="keywords" content="PD Dobrá Niva, poľnohospodárstvo, maštal, výkrm">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../../sources/favicon.ico">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="../../css/base.css?v=1761359100">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../../css/components/header.css?v=1761359100">
+    <link rel="stylesheet" href="../../css/components/footer.css?v=1761359100">
+    <link rel="stylesheet" href="../../css/components/hero.css?v=1761359100">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../../css/project-detail.css?v=1761359100">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP and Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navigation-container"></div>
+
+    <!-- Project Detail Container -->
+    <div class="project-detail-container">
+        <!-- Left Sidebar - Project Info -->
+        <div class="project-info-sidebar">
+            <div class="project-info-content">
+                <span class="project-accent-line"></span>
+                <h1 class="project-title">Polnohospodarsky druzstvo Dobra Niva</h1>
+                
+                <div class="project-description">
+                    <p>Komplex stavebných prác pre Polnohospodarsky druzstvo Dobra Niva - modernizácia a výstavba poľnohospodárskych objektov.</p>
+                    
+                    <p>Projekt zahŕňa výstavbu a modernizáciu poľnohospodárskych objektov vrátane maštaní, výkrmov a skladových priestorov pre efektívne hospodárenie s hospodárskymi zvieratami.</p>
+                </div>
+                
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <span class="meta-label">Rok</span>
+                        <span class="meta-value">2019-2025</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span class="meta-label">Miesto</span>
+                        <span class="meta-value">Dobrá Niva</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span class="meta-label">Klient</span>
+                        <span class="meta-value">PD Dobrá Niva</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <span class="meta-label">Typ</span>
+                        <span class="meta-value">Poľnohospodárska stavba</span>
+                    </div>
+                </div>
+                
+                <a href="../referencie.html" class="back-to-references">
+                    ← Späť na referencie
+                </a>
+            </div>
+        </div>
+        
+        <!-- Right Content - Photo Gallery -->
+        <div class="project-gallery-content">
+            <div class="project-gallery-grid" id="gallery-grid">
+                <!-- Photos will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Load components directly with fallback -->
+    <script src="../../js/fallback-components.js?v=1761359100"></script>
+    
+    <!-- Project Gallery Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectFolder = 'Polnohospodarsky druzstvo Dobra Niva';
+            const images = [
+                'Dobra-Niva-Sasa-2000x910.jpg',
+                'Dobra-niva-vykrm-bykov.jpeg',
+                'IMG_20190723_110300.jpg',
+                'IMG_20190723_110312.jpg',
+                'IMG_20190723_110314.jpg',
+                'PD-Dobra-Niva-Sasa.jpg',
+                'PD-Dobra-Niva-Sasa1.jpg',
+                'PD-Dobra-Niva-Sasa2.jpg',
+                'PD-Dobra-Niva-Sasa3.jpg',
+                'PD-Dobra-Niva-Sasa4.jpg',
+                'PD-Dobra-Niva-Sasa5.jpg',
+                'PD-Dobra-Niva-Sasa7.jpg',
+                'PD-Dobra-Niva-Sasa8.jpg',
+                'dji_fly_20250131_135038_0104_1738330439275_photo-1536x864.jpg',
+                'dji_fly_20250131_135144_0105_1738330438908_photo-1536x864.jpg',
+                'dji_fly_20250131_135632_0106_1738330438591_photo-1536x864.jpg',
+                'dji_fly_20250131_135924_0111_1738330436874_photo-1536x864.jpg',
+                'dji_fly_20250131_140000_0112_1738330436524_photo-1536x864.jpg',
+                'dji_fly_20250131_140950_0114_1738330435924_photo-1536x864.jpg'
+            ];
+            
+            loadGallery(images, projectFolder);
+            
+            // Initialize Lenis smooth scrolling
+            if (typeof Lenis !== 'undefined') {
+                const lenis = new Lenis({
+                    duration: 1.2,
+                    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    infinite: false
+                });
+                
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                
+                requestAnimationFrame(raf);
+            }
+        });
+        
+        function loadGallery(images, folder) {
+            const galleryGrid = document.getElementById('gallery-grid');
+            
+            images.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'project-gallery-item';
+                
+                const img = document.createElement('img');
+                img.src = `../../sources/referencie/${folder}/${image}`;
+                img.alt = `${folder} - ${index + 1}`;
+                img.loading = 'lazy';
+                
+                galleryItem.appendChild(img);
+                galleryGrid.appendChild(galleryItem);
+            });
+        }
+    </script>
+</body>
+</html>
