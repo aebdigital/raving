@@ -690,6 +690,23 @@
             
             // Initial count update
             updateCount();
+            
+            // Mobile filter toggle functionality
+            function initMobileFilterToggle() {
+                const filterTitle = document.querySelector('.filter-title');
+                const filterButtons = document.querySelector('.filter-buttons');
+                
+                if (filterTitle && filterButtons) {
+                    filterTitle.addEventListener('click', function() {
+                        // Toggle active class on both title and buttons
+                        filterTitle.classList.toggle('active');
+                        filterButtons.classList.toggle('active');
+                    });
+                }
+            }
+            
+            // Initialize mobile toggle
+            initMobileFilterToggle();
         });
     </script>
 
