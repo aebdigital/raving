@@ -163,6 +163,11 @@
     margin: 40px 0;
 }
 
+/* Hide mobile cards on desktop */
+.mobile-contact-cards {
+    display: none;
+}
+
 .contact-persons-table h3 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: var(--font-size-xl);
@@ -367,6 +372,10 @@
         padding: 30px 20px;
     }
     
+    .contact-info-content {
+        padding: 0;
+    }
+    
     .main-heading-container {
         flex-direction: column;
         gap: 20px;
@@ -391,12 +400,76 @@
     }
     
     .contact-persons-table {
-        margin: 30px 0;
-        overflow-x: auto;
+        display: none;
     }
     
-    .contact-persons-table table {
-        min-width: 600px;
+    /* Mobile Contact Person Cards */
+    .mobile-contact-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 30px 0;
+    }
+    
+    .mobile-contact-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 20px;
+        border-left: 4px solid rgba(240, 125, 0, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .mobile-contact-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    }
+    
+    .mobile-contact-card h4 {
+        color: rgba(240, 125, 0, 0.9);
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: var(--font-size-lg);
+        font-weight: 600;
+        margin: 0 0 10px 0;
+    }
+    
+    .mobile-contact-card .contact-detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8px 0;
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-contact-card .contact-detail:last-child {
+        border-bottom: none;
+    }
+    
+    .mobile-contact-card .contact-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: var(--font-size-sm);
+        font-weight: 500;
+        flex: 0 0 80px;
+    }
+    
+    .mobile-contact-card .contact-value {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: var(--font-size-sm);
+        text-align: right;
+        flex: 1;
+    }
+    
+    .mobile-contact-card .contact-value a {
+        color: rgba(240, 125, 0, 0.9);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .mobile-contact-card .contact-value a:hover {
+        color: white;
     }
     
     .contact-persons-table th,
@@ -438,6 +511,10 @@
         padding: 25px 15px;
     }
     
+    .contact-info-content {
+        padding: 0;
+    }
+    
     .location-main-heading {
         font-size: var(--font-size-xl);
     }
@@ -454,6 +531,21 @@
     
     .contact-email {
         padding: 10px;
+    }
+    
+    .contact-persons-table {
+        margin: 20px 0;
+        max-height: 350px;
+    }
+    
+    .contact-persons-table table {
+        min-width: 800px;
+    }
+    
+    .contact-persons-table th,
+    .contact-persons-table td {
+        padding: 6px 4px;
+        font-size: calc(var(--font-size-xs) * 0.9);
     }
     
     .location-map-container iframe {

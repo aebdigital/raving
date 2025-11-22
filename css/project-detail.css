@@ -244,13 +244,13 @@
         width: 100%;
         position: relative;
         height: auto;
-        padding: 40px 20px;
+        padding: 150px 20px 40px 20px;
         box-shadow: none;
     }
     
     .project-gallery-content {
         flex: 1;
-        padding-top: 80px; /* 100px reduced by 20% */
+        padding-top: 30px;
     }
     
     .project-gallery-grid {
@@ -282,10 +282,10 @@
     }
     
     .project-info-sidebar {
-        padding: 30px 15px;
+        padding: 150px 15px 30px 15px;
     }
     
     .project-gallery-content {
-        padding-top: 68px; /* 85px reduced by 20% */
+        padding-top: 30px;
     }
 }
