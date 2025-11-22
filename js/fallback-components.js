@@ -27,6 +27,8 @@ function initFallbackComponents() {
     // Initialize product carousel (mobile-only)
     initProductCarousel();
     
+    // Initialize lightbox for project pages
+    initLightboxFallback();
     
     console.log('Fallback components initialized');
 }
@@ -694,6 +696,228 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(showCookieConsent, 1000); // Show after 1 second
 });
 
+
+// Lightbox functionality for project detail pages
+function initLightboxFallback() {
+    // Only initialize on project pages
+    if (!window.location.pathname.includes('/projekt/')) {
+        return;
+    }
+
+    // Create lightbox HTML if it doesn't exist
+    if (!document.getElementById('lightbox')) {
+        const lightboxHTML = `
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-overlay"></div>
+                <div class="lightbox-container">
+                    <button class="lightbox-close" aria-label="Zavrieť">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                    <button class="lightbox-prev" aria-label="Predchádzajúci obrázok">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15,18 9,12 15,6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="lightbox-next" aria-label="Nasledujúci obrázok">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="lightbox-content">
+                        <img class="lightbox-image" src="" alt="" />
+                        <div class="lightbox-caption"></div>
+                        <div class="lightbox-counter">
+                            <span class="lightbox-current">1</span> / <span class="lightbox-total">1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+    }
+
+    // Initialize lightbox
+    const lightbox = {
+        currentIndex: 0,
+        images: [],
+        isOpen: false,
+
+        init: function() {
+            this.findGalleryImages();
+            this.bindEvents();
+        },
+
+        findGalleryImages: function() {
+            const galleryImages = document.querySelectorAll('.modal-gallery img, .project-gallery img, .project-gallery-grid img, #gallery-grid img');
+            this.images = Array.from(galleryImages);
+            
+            this.images.forEach((img, index) => {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    this.open(index);
+                });
+            });
+        },
+
+        bindEvents: function() {
+            const lightboxEl = document.getElementById('lightbox');
+            const closeBtn = lightboxEl.querySelector('.lightbox-close');
+            const prevBtn = lightboxEl.querySelector('.lightbox-prev');
+            const nextBtn = lightboxEl.querySelector('.lightbox-next');
+            const overlay = lightboxEl.querySelector('.lightbox-overlay');
+
+            closeBtn.addEventListener('click', () => this.close());
+            overlay.addEventListener('click', () => this.close());
+            prevBtn.addEventListener('click', () => this.prev());
+            nextBtn.addEventListener('click', () => this.next());
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!this.isOpen) return;
+                
+                switch(e.key) {
+                    case 'Escape':
+                        this.close();
+                        break;
+                    case 'ArrowLeft':
+                        this.prev();
+                        break;
+                    case 'ArrowRight':
+                        this.next();
+                        break;
+                }
+            });
+        },
+
+        open: function(index) {
+            if (this.images.length === 0) return;
+            
+            this.currentIndex = index;
+            this.isOpen = true;
+            
+            const lightboxEl = document.getElementById('lightbox');
+            const image = lightboxEl.querySelector('.lightbox-image');
+            const caption = lightboxEl.querySelector('.lightbox-caption');
+            const current = lightboxEl.querySelector('.lightbox-current');
+            const total = lightboxEl.querySelector('.lightbox-total');
+            
+            document.body.style.overflow = 'hidden';
+            lightboxEl.style.display = 'flex';
+            
+            setTimeout(() => {
+                lightboxEl.classList.add('lightbox-active');
+            }, 10);
+            
+            this.loadImage(this.images[index], image, caption);
+            
+            current.textContent = index + 1;
+            total.textContent = this.images.length;
+            
+            this.updateNavigation();
+        },
+
+        close: function() {
+            const lightboxEl = document.getElementById('lightbox');
+            
+            this.isOpen = false;
+            lightboxEl.classList.remove('lightbox-active');
+            
+            setTimeout(() => {
+                lightboxEl.style.display = 'none';
+                document.body.style.overflow = '';
+            }, 300);
+        },
+
+        prev: function() {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+            } else {
+                this.currentIndex = this.images.length - 1;
+            }
+            this.updateImage();
+        },
+
+        next: function() {
+            if (this.currentIndex < this.images.length - 1) {
+                this.currentIndex++;
+            } else {
+                this.currentIndex = 0;
+            }
+            this.updateImage();
+        },
+
+        updateImage: function() {
+            const lightboxEl = document.getElementById('lightbox');
+            const image = lightboxEl.querySelector('.lightbox-image');
+            const caption = lightboxEl.querySelector('.lightbox-caption');
+            const current = lightboxEl.querySelector('.lightbox-current');
+            
+            image.style.opacity = '0';
+            
+            setTimeout(() => {
+                this.loadImage(this.images[this.currentIndex], image, caption);
+                current.textContent = this.currentIndex + 1;
+                this.updateNavigation();
+                
+                setTimeout(() => {
+                    image.style.opacity = '1';
+                }, 50);
+            }, 150);
+        },
+
+        loadImage: function(imgElement, targetImg, captionElement) {
+            const src = imgElement.src;
+            const alt = imgElement.alt || '';
+            
+            const newImg = new Image();
+            
+            newImg.onload = () => {
+                targetImg.src = src;
+                targetImg.alt = alt;
+                captionElement.textContent = alt;
+                targetImg.style.opacity = '1';
+            };
+            
+            newImg.onerror = () => {
+                console.error('Failed to load image:', src);
+                targetImg.style.opacity = '1';
+            };
+            
+            targetImg.style.opacity = '0';
+            newImg.src = src;
+        },
+
+        updateNavigation: function() {
+            const lightboxEl = document.getElementById('lightbox');
+            const prevBtn = lightboxEl.querySelector('.lightbox-prev');
+            const nextBtn = lightboxEl.querySelector('.lightbox-next');
+            
+            if (this.images.length <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+            }
+        }
+    };
+
+    // Initialize lightbox
+    lightbox.init();
+    
+    // Make it globally available
+    window.lightboxFallback = lightbox;
+}
+
+// Initialize lightbox on project pages
+document.addEventListener('DOMContentLoaded', function() {
+    initLightboxFallback();
+});
 
 // Minimal fallback - no complex animations that could conflict
 console.log('Fallback: Using minimal approach like template');

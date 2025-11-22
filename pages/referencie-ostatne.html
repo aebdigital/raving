@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ostatné stavby - Referencie RAVING a.s.</title>
+    <meta name="description" content="Portfolio špeciálnych projektov a ostatných stavieb RAVING a.s. - športové zariadenia, kúpelné komplexy, rekreačné objekty, telocvične a tenisové akadémie.">
+    <meta name="keywords" content="ostatné stavby RAVING, športové zariadenia referencie, kúpelné komplexy, telocvične stavba, tenisové akadémie, rekreačné objekty, špeciálne projekty Piešťany">
+    <meta name="author" content="Stavebná spoločnosť RAVING a.s.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="sk">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raving.sk/pages/referencie-ostatne.html">
+    <meta property="og:title" content="Ostatné stavby - RAVING a.s.">
+    <meta property="og:description" content="Portfolio špeciálnych projektov a ostatných stavieb RAVING a.s. - športové zariadenia, kúpelné komplexy, rekreačné objekty.">
+    <meta property="og:image" content="https://raving.sk/sources/hero4.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RAVING a.s.">
+    <meta property="og:locale" content="sk_SK">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://raving.sk/pages/referencie-ostatne.html">
+    <meta property="twitter:title" content="Ostatné stavby - RAVING a.s.">
+    <meta property="twitter:description" content="Portfolio špeciálnych projektov a ostatných stavieb RAVING a.s. - športové zariadenia, kúpelné komplexy, rekreačné objekty.">
+    <meta property="twitter:image" content="https://raving.sk/sources/hero4.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://raving.sk/pages/referencie-ostatne.html">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Ostatné stavby",
+      "description": "Portfolio špeciálnych projektov a ostatných stavieb RAVING a.s.",
+      "url": "https://raving.sk/pages/referencie-ostatne.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "RAVING a.s.",
+        "url": "https://raving.sk"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domov",
+            "item": "https://raving.sk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Referencie",
+            "item": "https://raving.sk/pages/referencie.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Ostatné stavby",
+            "item": "https://raving.sk/pages/referencie-ostatne.html"
+          }
+        ]
+      }
+    }
+    </script>
+   
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="../css/base.css?v=3.0">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css?v=3.0">
+    <link rel="stylesheet" href="../css/components/footer.css?v=3.0">
+    <link rel="stylesheet" href="../css/components/hero.css?v=3.0">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../css/referencie.css?v=3.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP and Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navigation-container"></div>
+
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" style="padding-top: 150px;">
+        <div class="container">
+            <div class="gallery-container">
+                <!-- Left Sidebar Filter -->
+                <div class="filter-sidebar">
+                    <h3 class="filter-title">Kategórie</h3>
+                    <div class="filter-buttons">
+                        <a href="referencie.html" class="filter-btn">VŠETKY</a>
+                        <a href="referencie-priemyselne.html" class="filter-btn">PRIEMYSELNÉ A POĽNOHOSPODÁRSKE STAVBY</a>
+                        <a href="referencie-administrativne.html" class="filter-btn">ADMINISTRATÍVNE BUDOVY</a>
+                        <a href="referencie-rodinne.html" class="filter-btn">RODINNÉ A BYTOVÉ DOMY</a>
+                        <a href="referencie-ostatne.html" class="filter-btn active">OSTATNÉ STAVBY</a>
+                    </div>
+                </div>
+                
+                <!-- Gallery Content -->
+                <div class="gallery-content">
+                    <!-- Category Heading -->
+                    <div class="category-heading-container">
+                        <h1 id="category-heading" class="category-heading">Ostatné stavby</h1>
+                        <div class="category-count" id="category-count">Loading...</div>
+                    </div>
+                    
+                    <div class="gallery-grid" id="references-gallery">
+                        <!-- Gallery items will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Fallback Components (always loads) -->
+    <script src="../js/fallback-components.js?v=3.0"></script>
+    <script src="../js/gsap-simple.js?v=3.0"></script>
+
+    <!-- Gallery Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryContainer = document.getElementById('references-gallery');
+            
+            // All projects with ostatne category
+            const projects = [
+                {
+                    title: 'Cafe Mon Bijou',
+                    description: 'Rekonštrukcia budovy',
+                    slug: 'cafe-mon-bijou',
+                    folder: 'Cafe Mon Bijou rekonstrukcia budovy',
+                    firstImage: 'IMG_6556.jpg'
+                },
+                {
+                    title: 'Kúpelný dom Irma',
+                    description: 'Stavebné úpravy kúpelného domu',
+                    slug: 'kupelny-dom-irma',
+                    folder: 'Kupelny dom Irma stavebne upravy',
+                    firstImage: 'IRMA-SLK.png'
+                },
+                {
+                    title: 'Parkovisko',
+                    description: 'Novostavba a rekonštrukcia parkoviska',
+                    slug: 'parkovisko',
+                    folder: 'Novostavba parkoviska, rekonstrukcia jestvujuceho parkoviska',
+                    firstImage: 'DJI_20250331133341_0059_D-1536x864.jpg'
+                },
+                {
+                    title: 'Hella Slovakia - Jedáleň',
+                    description: 'Prístavba jedálne',
+                    slug: 'hella-slovakia-jedalen',
+                    folder: 'Pristavba jedalne Hella Slovakia',
+                    firstImage: 'Hella-Slovakia-Front-Lighting.png'
+                },
+                {
+                    title: 'Vacuumschmelze - Sklady',
+                    description: 'Prístavba skladu KB a haly',
+                    slug: 'vacuumschmelze-sklady',
+                    folder: 'Pristavba skladu KB a haly',
+                    firstImage: 'Vacuumschmelze-hala.png'
+                },
+                {
+                    title: 'Gymnázium',
+                    description: 'Prístavba tried a výstavba telocvične',
+                    slug: 'gymnazium',
+                    folder: 'Pristavba tried a vystavba telocvicne Gymnazia',
+                    firstImage: 'Gymnazium-pristavba.jpeg'
+                },
+                {
+                    title: 'Balnea Palace',
+                    description: 'Rekonštrukcia kúpelného hotela',
+                    slug: 'balnea-palace',
+                    folder: 'Rekonstrukcia kupelneho hotela',
+                    firstImage: 'Balnea-Palace5.jpeg'
+                },
+                {
+                    title: 'Kúpele Piešťany - Bazén',
+                    description: 'Rekonštrukcia trakčného bazéna',
+                    slug: 'kupele-piestany-bazen',
+                    folder: 'Rekonstrukcia trakcneho bazena Kupele Piestany',
+                    firstImage: '20200706_150802-1024x768.jpg'
+                },
+                {
+                    title: 'Kúpalisko EVA',
+                    description: 'Rekonštrukcia vonkajších bazénov',
+                    slug: 'kupalisko-eva',
+                    folder: 'Rekonstrukcia vonkajsich bazenov kupaliska EVA',
+                    firstImage: 'kupalisko-EVA-2000x1200.png'
+                },
+                {
+                    title: 'Chata Modra Harmónia',
+                    description: 'Rekreačná chata',
+                    slug: 'chata-modra-harmonia',
+                    folder: 'Rekreacna chata - Modra Harmonia',
+                    firstImage: '1_viz-1.jpg'
+                },
+                {
+                    title: 'Telocvičňa Slávia Trnava',
+                    description: 'Telocvičňa v prírode',
+                    slug: 'telocvicna-slavia-trnava',
+                    folder: 'Telocvicna v prirode - Slavia Trnava',
+                    firstImage: '1_viz.jpg'
+                },
+                {
+                    title: 'Tenisová akadémia Empire',
+                    description: 'Tenisová akadémia Trnava',
+                    slug: 'tenisova-akademia-empire',
+                    folder: 'Tenisova akademia Empire Trnava',
+                    firstImage: 'Tenisova-akademia-Trnava.jpg'
+                }
+            ];
+            
+            // Function to render gallery items
+            function renderGallery() {
+                galleryContainer.innerHTML = '';
+                
+                projects.forEach(function(project, index) {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.style.opacity = '0';
+                    galleryItem.style.transform = 'translateY(30px)';
+                    
+                    galleryItem.innerHTML = `
+                        <a href="projekt/projekt-${project.slug}.html" style="text-decoration: none; color: inherit;" class="project-link">
+                            <div class="gallery-image-container">
+                                <img src="../sources/referencie/${project.folder}/${project.firstImage}" alt="${project.title}" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-title">${project.title}</div>
+                                    <div class="gallery-description">${project.description}</div>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                    
+                    galleryContainer.appendChild(galleryItem);
+                    
+                    // Animate in with staggered delay
+                    setTimeout(() => {
+                        galleryItem.style.transition = 'all 0.5s ease';
+                        galleryItem.style.opacity = '1';
+                        galleryItem.style.transform = 'translateY(0)';
+                    }, index * 50);
+                });
+            }
+            
+            // Update count
+            function updateCount() {
+                const categoryCount = document.getElementById('category-count');
+                if (categoryCount) {
+                    const countText = projects.length === 1 ? 'projekt' : (projects.length < 5 ? 'projekty' : 'projektov');
+                    categoryCount.textContent = `${projects.length} ${countText}`;
+                }
+            }
+            
+            // Initial render
+            renderGallery();
+            updateCount();
+        });
+    </script>
+
+    <!-- Main JavaScript (ES6 modules) -->
+    <script type="module" src="../js/main.js?v=3.0"></script>
+</body>
+</html>

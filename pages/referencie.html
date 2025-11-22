@@ -5,9 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title>Referencie - RAVING a.s. | Portfolio realizovaných projektov</title>
-    <meta name="description" content="Pozrite si naše referencie a realizované projekty v oblasti stavebníctva. Kompletná stavebná realizácia, žeriavy a mechanizácia.">
-    <meta name="keywords" content="referencie, portfolio, realizácie, stavebné projekty, RAVING, Piešťany, stavebná spoločnosť">
+    <title>Referencie a realizované projekty - RAVING a.s. | Portfolio stavebnej spoločnosti</title>
+    <meta name="description" content="Pozrite si naše referencie a realizované projekty - rodinné domy, priemyselné budovy, administratívne komplexy. Viac ako 500 úspešne dokončených projektov od roku 1991.">
+    <meta name="keywords" content="referencie RAVING, portfolio stavebná spoločnosť, realizované projekty, stavebné referencie Piešťany, rodinné domy referencie, priemyselné budovy portfolio, administratívne budovy realizácie">
+    <meta name="author" content="Stavebná spoločnosť RAVING a.s.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="sk">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raving.sk/pages/referencie.html">
+    <meta property="og:title" content="Referencie a realizované projekty - RAVING a.s.">
+    <meta property="og:description" content="Pozrite si naše referencie a realizované projekty - viac ako 500 úspešne dokončených projektov od roku 1991.">
+    <meta property="og:image" content="https://raving.sk/sources/hero1.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RAVING a.s.">
+    <meta property="og:locale" content="sk_SK">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://raving.sk/pages/referencie.html">
+    <meta property="twitter:title" content="Referencie a realizované projekty - RAVING a.s.">
+    <meta property="twitter:description" content="Pozrite si naše referencie a realizované projekty - viac ako 500 úspešne dokončených projektov od roku 1991.">
+    <meta property="twitter:image" content="https://raving.sk/sources/hero1.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://raving.sk/pages/referencie.html">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Referencie a realizované projekty",
+      "description": "Portfolio realizovaných projektov stavebnej spoločnosti RAVING a.s.",
+      "url": "https://raving.sk/pages/referencie.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "RAVING a.s.",
+        "url": "https://raving.sk"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domov",
+            "item": "https://raving.sk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Referencie",
+            "item": "https://raving.sk/pages/referencie.html"
+          }
+        ]
+      }
+    }
+    </script>
    
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
@@ -31,33 +88,22 @@
     <!-- Navigation Container -->
     <div id="navigation-container"></div>
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
-        <div class="contact-hero-bg">
-            <img src="../sources/hero1.jpg" alt="RAVING referencie pozadie">
-        </div>
-        <div class="contact-hero-content">
-            <div class="container">
-                <h1 class="contact-hero-title">Referencie</h1>
-            </div>
-        </div>
-    </section>
 
     
 
     <!-- Gallery Section -->
-    <section class="gallery-section">
+    <section class="gallery-section" style="padding-top: 150px;">
         <div class="container">
             <div class="gallery-container">
                 <!-- Left Sidebar Filter -->
                 <div class="filter-sidebar">
                     <h3 class="filter-title">Kategórie</h3>
                     <div class="filter-buttons">
-                        <button class="filter-btn active" data-category="all">Všetky</button>
-                        <button class="filter-btn" data-category="priemyselne">Priemyselné a poľnohospodárske stavby</button>
-                        <button class="filter-btn" data-category="administrativne">Administratívne budovy</button>
-                        <button class="filter-btn" data-category="rodinne">Rodinné a bytové domy</button>
-                        <button class="filter-btn" data-category="ostatne">Ostatné stavby</button>
+                        <a href="referencie.html" class="filter-btn active">VŠETKY</a>
+                        <a href="referencie-priemyselne.html" class="filter-btn">PRIEMYSELNÉ A POĽNOHOSPODÁRSKE STAVBY</a>
+                        <a href="referencie-administrativne.html" class="filter-btn">ADMINISTRATÍVNE BUDOVY</a>
+                        <a href="referencie-rodinne.html" class="filter-btn">RODINNÉ A BYTOVÉ DOMY</a>
+                        <a href="referencie-ostatne.html" class="filter-btn">OSTATNÉ STAVBY</a>
                     </div>
                 </div>
                 
@@ -65,7 +111,7 @@
                 <div class="gallery-content">
                     <!-- Category Heading -->
                     <div class="category-heading-container">
-                        <h2 id="category-heading" class="category-heading">Všetky projekty</h2>
+                        <h1 id="category-heading" class="category-heading">Všetky projekty</h1>
                         <div class="category-count" id="category-count">55 projektov</div>
                     </div>
                     
@@ -633,71 +679,17 @@
                 restoreGalleryState();
             }
             
-            // Filter functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            
-            // Function to update category heading and count
-            function updateCategoryHeading(category, projectCount) {
-                const categoryHeading = document.getElementById('category-heading');
+            // Update count for all projects
+            function updateCount() {
                 const categoryCount = document.getElementById('category-count');
-                
-                const categoryNames = {
-                    'all': 'Všetky projekty',
-                    'priemyselne': 'Priemyselné a poľnohospodárske stavby',
-                    'administrativne': 'Administratívne budovy',
-                    'rodinne': 'Rodinné a bytové domy',
-                    'ostatne': 'Ostatné stavby'
-                };
-                
-                if (categoryHeading) {
-                    categoryHeading.textContent = categoryNames[category] || 'Všetky projekty';
-                }
-                
                 if (categoryCount) {
-                    const countText = projectCount === 1 ? 'projekt' : (projectCount < 5 ? 'projekty' : 'projektov');
-                    categoryCount.textContent = `${projectCount} ${countText}`;
+                    const countText = projects.length === 1 ? 'projekt' : (projects.length < 5 ? 'projekty' : 'projektov');
+                    categoryCount.textContent = `${projects.length} ${countText}`;
                 }
             }
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Don't do anything if this button is already active
-                    if (this.classList.contains('active')) {
-                        return;
-                    }
-                    
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Get the category to filter by
-                    const category = this.getAttribute('data-category');
-                    
-                    // Smooth scroll to top of page first
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Filter and render projects after scroll animation
-                    setTimeout(() => {
-                        let filteredProjects;
-                        if (category === 'all') {
-                            filteredProjects = projects;
-                        } else {
-                            filteredProjects = projects.filter(project => project.category === category);
-                        }
-                        
-                        // Update heading and count
-                        updateCategoryHeading(category, filteredProjects.length);
-                        
-                        // Render gallery
-                        renderGallery(filteredProjects);
-                    }, 500); // Increased delay to ensure scroll completes
-                });
-            });
+            
+            // Initial count update
+            updateCount();
         });
     </script>
 

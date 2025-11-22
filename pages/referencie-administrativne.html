@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Administratívne budovy - Referencie RAVING a.s.</title>
+    <meta name="description" content="Portfolio administratívnych budov a kancelárskych komplexov realizovaných spoločnosťou RAVING a.s. Moderné administratívne stavby v Piešťanoch a okolí.">
+    <meta name="keywords" content="administratívne budovy RAVING, kancelárske komplexy, obchodné domy referencie, administratívne stavby Piešťany, moderné budovy portfolio, komerčné stavby">
+    <meta name="author" content="Stavebná spoločnosť RAVING a.s.">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="sk">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raving.sk/pages/referencie-administrativne.html">
+    <meta property="og:title" content="Administratívne budovy - RAVING a.s.">
+    <meta property="og:description" content="Portfolio administratívnych budov a kancelárskych komplexov realizovaných spoločnosťou RAVING a.s.">
+    <meta property="og:image" content="https://raving.sk/sources/hero2.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="RAVING a.s.">
+    <meta property="og:locale" content="sk_SK">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://raving.sk/pages/referencie-administrativne.html">
+    <meta property="twitter:title" content="Administratívne budovy - RAVING a.s.">
+    <meta property="twitter:description" content="Portfolio administratívnych budov a kancelárskych komplexov realizovaných spoločnosťou RAVING a.s.">
+    <meta property="twitter:image" content="https://raving.sk/sources/hero2.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://raving.sk/pages/referencie-administrativne.html">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Administratívne budovy",
+      "description": "Portfolio administratívnych budov RAVING a.s.",
+      "url": "https://raving.sk/pages/referencie-administrativne.html",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "RAVING a.s.",
+        "url": "https://raving.sk"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domov",
+            "item": "https://raving.sk"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Referencie",
+            "item": "https://raving.sk/pages/referencie.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Administratívne budovy",
+            "item": "https://raving.sk/pages/referencie-administrativne.html"
+          }
+        ]
+      }
+    }
+    </script>
+   
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../sources/favicon.ico">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="../css/base.css?v=3.0">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css?v=3.0">
+    <link rel="stylesheet" href="../css/components/footer.css?v=3.0">
+    <link rel="stylesheet" href="../css/components/hero.css?v=3.0">
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../css/referencie.css?v=3.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP and Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Container -->
+    <div id="navigation-container"></div>
+
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" style="padding-top: 150px;">
+        <div class="container">
+            <div class="gallery-container">
+                <!-- Left Sidebar Filter -->
+                <div class="filter-sidebar">
+                    <h3 class="filter-title">Kategórie</h3>
+                    <div class="filter-buttons">
+                        <a href="referencie.html" class="filter-btn">VŠETKY</a>
+                        <a href="referencie-priemyselne.html" class="filter-btn">PRIEMYSELNÉ A POĽNOHOSPODÁRSKE STAVBY</a>
+                        <a href="referencie-administrativne.html" class="filter-btn active">ADMINISTRATÍVNE BUDOVY</a>
+                        <a href="referencie-rodinne.html" class="filter-btn">RODINNÉ A BYTOVÉ DOMY</a>
+                        <a href="referencie-ostatne.html" class="filter-btn">OSTATNÉ STAVBY</a>
+                    </div>
+                </div>
+                
+                <!-- Gallery Content -->
+                <div class="gallery-content">
+                    <!-- Category Heading -->
+                    <div class="category-heading-container">
+                        <h1 id="category-heading" class="category-heading">Administratívne budovy</h1>
+                        <div class="category-count" id="category-count">Loading...</div>
+                    </div>
+                    
+                    <div class="gallery-grid" id="references-gallery">
+                        <!-- Gallery items will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <!-- Fallback Components (always loads) -->
+    <script src="../js/fallback-components.js?v=3.0"></script>
+    <script src="../js/gsap-simple.js?v=3.0"></script>
+
+    <!-- Gallery Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryContainer = document.getElementById('references-gallery');
+            
+            // All projects with administrativne category
+            const projects = [
+                {
+                    title: 'Meroco Leopoldov',
+                    description: 'Priemyselný komplex',
+                    slug: 'meroco-leopoldov',
+                    folder: 'Meroco Leopoldov',
+                    firstImage: 'Meroco1.jpg'
+                },
+                {
+                    title: 'Administratívna budova',
+                    description: 'Nadstavba administratívnej budovy',
+                    slug: 'administrativna-budova',
+                    folder: 'Nadstavba administrativnej budovy',
+                    firstImage: 'Vacuumschmelze-nadstavba.png'
+                },
+                {
+                    title: 'Administratívna budova Ekom',
+                    description: 'Nadstavba budovy Ekom',
+                    slug: 'administrativna-budova-ekom',
+                    folder: 'Nadstavba administrativnej budovy Ekom',
+                    firstImage: 'Ekom-stavba.jpg'
+                },
+                {
+                    title: 'ON Semiconductor',
+                    description: 'Priemyselný komplex Piešťany',
+                    slug: 'on-semiconductor',
+                    folder: 'ON Semiconductor Piestany',
+                    firstImage: 'OnSemiconductor1.jpg'
+                },
+                {
+                    title: 'Obchodný dom Domoss',
+                    description: 'Obchodný dom Piešťany',
+                    slug: 'obchodny-dom-domoss',
+                    folder: 'Obchodny dom Domoss Piestany',
+                    firstImage: 'domoss-letak.jpg'
+                },
+                {
+                    title: 'Penzión Anna Vila',
+                    description: 'Rekonštrukcia penziónu, Piešťany',
+                    slug: 'penzion-anna-vila',
+                    folder: 'Rekonstrukcia penzionu Anna Vila, Sad A. Kmeta, Piestany',
+                    firstImage: 'IMG_2364-1-rotated (1).jpg'
+                },
+                {
+                    title: 'Vrbovská cesta',
+                    description: 'Rekonštrukcia polyfunkčnej budovy',
+                    slug: 'vrbovska-cesta',
+                    folder: 'Rekonstrukcia polyfunkcnej budovy, vlastne sidlo spolocnosti',
+                    firstImage: 'Vrbovska-1536x864.jpg'
+                },
+                {
+                    title: 'Kúpele Piešťany a.s.',
+                    description: 'Slovenské liečebné kúpele',
+                    slug: 'kupele-piestany-as',
+                    folder: 'Slovenske liecebne kupele Piestany, a.s.',
+                    firstImage: 'Riaditelstvo-kupelov-pristavba.jpeg'
+                },
+                {
+                    title: 'Vacuumschmelze - Administratíva',
+                    description: 'Výstavba administratívnej budovy',
+                    slug: 'vacuumschmelze-administrativa',
+                    folder: 'Vystavba administrativnej budovy',
+                    firstImage: '20170614_101352-2000x1200.jpg'
+                }
+            ];
+            
+            // Function to render gallery items
+            function renderGallery() {
+                galleryContainer.innerHTML = '';
+                
+                projects.forEach(function(project, index) {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    galleryItem.style.opacity = '0';
+                    galleryItem.style.transform = 'translateY(30px)';
+                    
+                    galleryItem.innerHTML = `
+                        <a href="projekt/projekt-${project.slug}.html" style="text-decoration: none; color: inherit;" class="project-link">
+                            <div class="gallery-image-container">
+                                <img src="../sources/referencie/${project.folder}/${project.firstImage}" alt="${project.title}" loading="lazy">
+                                <div class="gallery-overlay">
+                                    <div class="gallery-title">${project.title}</div>
+                                    <div class="gallery-description">${project.description}</div>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                    
+                    galleryContainer.appendChild(galleryItem);
+                    
+                    // Animate in with staggered delay
+                    setTimeout(() => {
+                        galleryItem.style.transition = 'all 0.5s ease';
+                        galleryItem.style.opacity = '1';
+                        galleryItem.style.transform = 'translateY(0)';
+                    }, index * 50);
+                });
+            }
+            
+            // Update count
+            function updateCount() {
+                const categoryCount = document.getElementById('category-count');
+                if (categoryCount) {
+                    const countText = projects.length === 1 ? 'projekt' : (projects.length < 5 ? 'projekty' : 'projektov');
+                    categoryCount.textContent = `${projects.length} ${countText}`;
+                }
+            }
+            
+            // Initial render
+            renderGallery();
+            updateCount();
+        });
+    </script>
+
+    <!-- Main JavaScript (ES6 modules) -->
+    <script type="module" src="../js/main.js?v=3.0"></script>
+</body>
+</html>

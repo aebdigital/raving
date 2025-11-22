@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main Homepage -->
+  <url>
+    <loc>https://raving.sk/</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://raving.sk/sources/hero1.jpg</image:loc>
+      <image:title>Stavebná spoločnosť RAVING a.s.</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://raving.sk/pages/o-nas.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://raving.sk/pages/kontakt.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- References Main Page -->
+  <url>
+    <loc>https://raving.sk/pages/referencie.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- References Category Pages -->
+  <url>
+    <loc>https://raving.sk/pages/referencie-priemyselne.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/referencie-administrativne.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/referencie-rodinne.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/referencie-ostatne.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Project Detail Pages -->
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-administrativna-budova-ekom.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-administrativna-budova.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-agrocoop-imeli-novstavba-mastale-k250.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-agropodnik-trnava-cov.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-apartmanovy-dom-pinia.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-apartmanovy-dom-tilia.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-balnea-palace.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-bioplynova-stanica-rpd-zuberec.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-bytovy-dom-bernolakova-2.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-bytovy-dom-bernolakova.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-cafe-mon-bijou.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-chata-modra-harmonia.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-gymnazium.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-hella-slovakia-jedalen.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-jfk-inovec-3000m2.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-jfk-inovec-9000m2.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-kotolna-brezova.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-kupalisko-eva.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-kupele-piestany-as.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-kupele-piestany-bazen.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-kupelny-dom-irma.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-mastal-pd-okoc.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-meroco-leopoldov.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-modernizacia-farmy-pd-dolna-krupa.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-obchodny-dom-domoss.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-odchovna-mladeho-dobytka.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-on-semiconductor.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-oxymat-vadovce.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-parkovisko.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pd-dobra-niva-odchovna.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pd-dobra-niva.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pd-okoc-silazny-zlab.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pd-ostrov-osivova-kukurica.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pd-ostrov.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pd-radosinka.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-penzion-anna-vila.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-porsche-slovakia.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pristresok-na-palety.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pvod-drahovce.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-pvod-kocin.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-rd-piestany.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-rd-povazany.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-rd-s-bazenom-piestany.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-rybarova-farma-surany.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-sklad-hnojaciek-senica.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-telocvicna-slavia-trnava.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-tenisova-akademia-empire.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-vacuumschmelze-administrativa.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-vacuumschmelze-sklady.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-vrbovska-cesta.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://raving.sk/pages/projekt/projekt-vyrobna-hala-stakotra.html</loc>
+    <lastmod>2024-11-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

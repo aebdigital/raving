@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../../css/components/hero.css?v=1761359100">
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="../../css/project-detail.css?v=1761359100">
+    <link rel="stylesheet" href="../../css/components/lightbox.css?v=1761359100">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- GSAP and Animation Libraries -->
@@ -83,6 +84,7 @@
 
     <!-- Load components directly with fallback -->
     <script src="../../js/fallback-components.js?v=1761359100"></script>
+    <script type="module" src="../../js/components/lightbox.js?v=1761359100"></script>
     
     <!-- Project Gallery Script -->
     <script>
@@ -109,6 +111,11 @@
                     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                     infinite: false
                 });
+            
+            // Initialize lightbox
+            if (typeof window.initLightbox === 'function') {
+                window.initLightbox();
+            }
                 
                 function raf(time) {
                     lenis.raf(time);
@@ -119,14 +126,17 @@
             }
         });
         
+
         function loadGallery(images, folder) {
             const galleryGrid = document.getElementById('gallery-grid');
+            galleryGrid.className = 'project-gallery-grid project-gallery';
             
             images.forEach((image, index) => {
                 const galleryItem = document.createElement('div');
                 galleryItem.className = 'project-gallery-item';
                 
                 const img = document.createElement('img');
+                img.className = 'gallery-image';
                 img.src = `../../sources/referencie/${folder}/${image}`;
                 img.alt = `${folder} - ${index + 1}`;
                 img.loading = 'lazy';
@@ -134,6 +144,11 @@
                 galleryItem.appendChild(img);
                 galleryGrid.appendChild(galleryItem);
             });
+            
+            // Initialize lightbox
+            if (typeof window.initLightbox === 'function') {
+                window.initLightbox();
+            }
         }
     </script>
 </body>

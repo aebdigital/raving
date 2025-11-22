@@ -175,7 +175,7 @@
 
 .cta-btn.primary {
     background: var(--primary-color);
-    color: #131313;
+    color: white;
     border: 2px solid transparent;
     font-weight: 700;
 }
@@ -552,28 +552,15 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    background: var(--background-color);
 }
 
 .about-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: -2;
+    display: none;
 }
 
 .about-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: -1;
+    display: none;
 }
 
 .about-content {
@@ -581,7 +568,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: flex-start;
-    color: white;
+    color: var(--text-color);
     z-index: 1;
 }
 
@@ -615,7 +602,7 @@
     font-family: var(--font-family-heading);
     font-size: var(--font-size-3xl);
     font-weight: 600;
-    color: white;
+    color: var(--text-color);
     line-height: var(--line-height-tight);
     margin: 0;
 }
@@ -629,7 +616,7 @@
 .about-description p {
     font-size: var(--font-size-base);
     line-height: var(--line-height-relaxed);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color-secondary);
     font-weight: 300;
     margin: 0;
 }
@@ -679,7 +666,7 @@
 .about-services p {
     font-size: var(--font-size-base);
     line-height: var(--line-height-relaxed);
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-color-secondary);
     font-weight: 300;
     margin: 0;
 }
@@ -687,7 +674,7 @@
 .about-services h3 {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: white;
+    color: var(--text-color);
     margin: 20px 0 10px 0;
 }
 
@@ -697,8 +684,8 @@
 
 .about-cta-btn {
     display: inline-block;
-    background: white;
-    color: black;
+    background: var(--primary-color);
+    color: white;
     padding: 15px 40px;
     font-weight: 600;
     text-transform: uppercase;
@@ -711,10 +698,10 @@
 }
 
 .about-cta-btn:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: black;
+    background: rgba(240, 125, 0, 0.9);
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(240, 125, 0, 0.3);
 }
 
 .cech-section {
@@ -742,7 +729,7 @@
 
 /* Gallery Section */
 .gallery {
-    padding: 80px 0 100px;
+    padding: 30px 0 100px;
     background: var(--background-color);
     overflow: hidden;
 }
